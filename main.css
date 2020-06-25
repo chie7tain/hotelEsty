@@ -1,0 +1,29 @@
+/* these are variables we use in our css so we have uniform values across our project  and this can be used by using the var keyword followed by () and -- the variable name*/
+:root{
+  --primaryColor:#D66939;
+  --mainWhite:#fff;
+  --mainBlack:#2C2C2C;
+  --mainGrey:#ececec;
+  --mainTransition:all 0.3s linear;
+  --mainSpacing:0.1rem;
+}
+/* default styles reset */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  scroll-behavior:smooth;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  width: 1366px;
+  max-width: calc(100% - 20px);
+  margin: 0 auto;
+  padding: 0 10px;
+}
+

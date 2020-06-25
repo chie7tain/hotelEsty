@@ -1,0 +1,704 @@
+/* mobile styles */
+@media only screen and (max-width:400px){
+    body{
+    overflow-x: hidden;
+  }
+
+/* Styles for the top most white container with whats app number and price */
+.booking{
+  width:100%;
+  display:flex;
+  justify-content: space-evenly;
+  background:var(--mainWhite);
+  color:var(--mainBlack);
+  letter-spacing: var(--mainSpacing);
+}
+/* styles for call icon */
+.call-icon{
+  float: left;
+  margin-right:5px;
+  width:20px;
+}
+
+/* styles for logo */
+.logo{
+  width:150px;
+  scroll-margin-top:4rem;
+}
+
+/* styles for navbar */
+.nav-bar{
+  /* for some webkit browsers */
+  position:-webkit-sticky;
+  position:sticky;
+  top:0;
+  width:100%;
+  height:60px;
+  display:flex;
+  justify-content: space-between;
+  z-index:1;
+  background:var(--mainGrey);
+  transition: var(--mainTransition);
+}
+.nav-bar-center{
+  display:flex;
+  width:100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav-links{
+list-style-type: none;
+text-transform: uppercase;
+margin:10px;
+}
+.nav-links a{
+  text-decoration:none;
+  letter-spacing: var(--mainSpacing);
+  color:var(--mainBlack);
+  transition:var(--mainTransition);
+}
+.nav-links a:hover{
+  color:var(--mainWhite);
+  background:var(--primaryColor);
+}
+
+  /* responsive nav bar styles */
+  .burger{
+    width:40px;
+    height:40px;
+    margin:10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    cursor:pointer;
+
+  }
+  .line1,.line2,.line3{
+    background:var(--mainBlack);
+    width:30px;
+    height:3px;
+    margin:3px;
+    transition:var(--mainTransition);
+  }
+  .navigation{
+    position: absolute;
+    right:0px;
+    top:60px;
+    width:50%;
+    height:70vh;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    transform:translateX(100%);
+    background:transparent;
+    transition:var(--mainTransition);
+    justify-content: space-around;
+  }
+  .navigation li{
+    opacity: 0;
+  }
+  .nav-active{
+    transform:translateX(0%);
+    background:var(--mainGrey);
+  }
+  @keyframes navLinkFade{
+    from{
+      opacity:0;
+      transform:translateX(50px);
+    }
+    to{
+      opacity:1;
+      transform:translateX(0px);
+    }
+  }
+  .toggle .line1{
+    transform:rotate(-45deg) translate(-5px,6px);
+  }
+  .toggle .line2{
+    opacity:0;
+  }
+  .toggle .line3{
+    transform:rotate(45deg) translate(-5px,-6px);
+  }
+  /* end of styles for responsive navbar */
+  /* -----======================== */
+
+   /* styles for hero  */
+.hero{
+  min-height:calc(100vh - 60px);
+  background: url('../assets/hero-img.png') center/cover no-repeat ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* opacity: 0.6; */
+}
+/* end of styles for hero */
+/* ============== */
+
+
+/* styles for banner */
+.welcome-text-container{
+  display:flex;
+  max-width: 400px;
+  align-items: center;
+  justify-content: space-evenly;
+  margin:auto;
+}
+.line{
+  width:100px;
+  height:2px;
+  background:rgb(243, 90, 25);
+}
+.welcome-heading{
+  color:var(--mainBlack);
+}
+.banner{
+  text-align:center;
+  display:inline-block;
+  padding:2rem;
+  /* background:var(--mainGrey); */
+  transition: var(--mainTransition);
+
+}
+
+.banner-title{
+  font-size:3.4rem;
+  text-transform:uppercase;
+  letter-spacing: var(--mainSpacing);
+  margin-bottom:3rem;
+  color:var(--mainBlack);
+}
+.banner-btn{
+  padding:1rem 3rem;
+  text-transform:uppercase;
+  letter-spacing: var(--mainSpacing);
+  font-size: 1rem;
+  background:var(--primaryColor);
+  color:var(--mainBlack);
+  border:1px solid var(--primaryColor);
+  transition:var(--mainTransition);
+  cursor:pointer;
+}
+.banner-btn:hover{
+  background:var(--mainGrey);
+  color:var(--primaryColor);
+
+}
+/* end of banner */
+/* ========= */
+  /* styles for room availability form */
+.availability{
+ position: relative;
+ padding:1rem;
+  bottom:25px;
+  margin:auto;
+  width:100%;
+  height:30vh;
+  background:var(--primaryColor);
+  transition: var(--mainTransition);
+}
+.availability:hover{
+  background: var(--mainWhite);
+    border:1px solid var(--primaryColor);
+}
+.form{
+  height: 100%;
+  width:100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr ;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  column-gap: 10px;
+  grid-template-areas:
+  "header1 header2"
+  "body body"
+  "section section"
+  "footer footer";
+
+}
+.check-btn{
+  height: 50px;
+  padding:0.4rem;
+  cursor: pointer;
+  border:none;
+  background: var(--mainWhite);
+  letter-spacing: var(--mainSpacing);
+    transition: var(--mainTransition);
+}
+.check-btn:hover{
+  color: var(--primaryColor);
+  border:1px solid var(--primaryColor);
+}
+.check-in{
+  grid-area: header1;
+}
+.check-out{
+  grid-area: header2;
+}
+.input{
+  width:30%;
+  padding:0.4rem;
+}
+#adult{
+  width:100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin:3px;
+  grid-area: body;
+}
+#child{
+  width:100%;
+  display: flex;
+  margin:3px;
+  justify-content: space-between;
+  grid-area:section;
+}
+.checkavailabitly-btn{
+  grid-area:footer;
+  width:100%;
+  background:var(--mainWhite);
+  border:none;
+  letter-spacing: var(--mainSpacing);
+  text-transform: uppercase;
+  cursor:pointer;
+  transition: var(--mainTransition);
+}
+.checkavailabitly-btn:hover{
+  background: var(--mainBlack);
+  color:var(--mainWhite);
+  border:1px solid var(--primaryColor);
+}
+/* end of availability form  */
+/* ============== */
+/* * styles for about us */
+.about-section{
+  letter-spacing: var(--mainSpacing);
+  color:var(--mainBlack);
+  scroll-margin-top: 4rem;
+}
+.about-section h2{
+  text-transform: uppercase;
+  margin:0 0 10px;
+}
+.about-section p{
+  margin:10px 0;
+}
+.readmore-btn{
+  padding:1rem 2rem;
+  background: var(--primaryColor);
+  color:var(--mainWhite);
+  transition: var(--mainTransition);
+  border:none;
+  cursor:pointer;
+  letter-spacing: var(--mainSpacing);
+  margin:10px 0;
+}
+.readmore-btn:hover{
+  background: var(--mainWhite);
+  color: var(--primaryColor);
+  border:1px solid var(--primaryColor);
+}
+/* end of styles for about us */
+/* ====================== */
+/* styles for rooms */
+.rooms{
+  background:var(--mainBlack);
+  scroll-margin-top: 4rem;
+}
+.viewmore-container{
+  display:flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding:0.5rem;
+  color:var(--mainWhite);
+  text-transform:uppercase;
+  letter-spacing:var(--mainSpacing);
+}
+.viewmore-container img,h3{
+  margin:10px;
+  cursor:pointer;
+}
+.room-banner{
+  color:var(--mainWhite);
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  margin:20px;
+}
+.room-banner h2{
+  font-size: .9em;
+  letter-spacing:var(--mainSpacing);
+  text-transform: uppercase;
+  margin:5px;
+}
+.room-banner p{
+  font-size:.7em;
+  letter-spacing: var(--mainSpacing);
+  text-align: center;
+}
+.room-holder{
+  position: relative;
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content: center;
+  overflow:hidden;
+}
+.room-holder:hover .room-image-banner{
+  transform: translateX(0%);
+}
+.room-image{
+  width:100%;
+  margin:1rem;
+}
+.room-image-banner{
+  position: absolute;
+  right:0px;
+  width:100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: .75;
+  background: var(--mainGrey);
+  color:var(--mainBlack);
+  padding:2rem 2rem;
+  transition: var(--mainTransition);
+  transform: translateX(100%);
+}
+.room-image-banner:hover{
+  background:var(--mainBlack);
+  color:var(--mainWhite);
+}
+#align-right{
+ text-align:right;
+}
+.image-banner-title{
+  font-size:1em;
+  text-transform: uppercase;
+  letter-spacing: var(--mainSpacing);
+}
+.image-banner-text{
+  font-size:.7em;
+  letter-spacing: var(--mainSpacing);
+}
+.room-price{
+  font-size: .8em;
+  color:var(--primaryColor);
+  margin:10px 0;
+  text-decoration: underline;
+}
+.reservation-btn{
+  padding:.5rem 1rem;
+  font-size: .6em;
+  background:var(--primaryColor);
+  color:var(--mainWhite);
+  border:none;
+  text-transform: uppercase;
+  letter-spacing: var(--mainSpacing);
+  transition: var(--mainTransition);
+  cursor: pointer;
+}
+.reservation-btn:hover{
+  background:var(--mainWhite);
+  color:var(--primaryColor);
+  border:1px solid var(--primaryColor);
+}
+/* end of styles for rooms */
+/* ============== */
+/* styles for facilities section */
+.facilities{
+  display: flex;
+  flex-direction:column;
+  margin-bottom:20px ;
+  scroll-margin-top: 4rem;
+}
+.title-container{
+  display: flex;
+
+  flex-direction:column;
+  align-items: center;
+  justify-self: center;
+  width:100%;
+  text-align:center;
+  margin:10px 0;
+}
+
+.facility-grid-container{
+  display:grid;
+  grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+  column-gap: 20px;
+}
+.image-of-facility{
+  width:100%;
+  transition: var(--mainTransition);
+  margin:10px 0;
+}
+.facility-holder{
+  width:100%;
+  position: relative;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+  transition:var(--mainTransition);
+}
+.facility-holder:hover .facility-description{
+  transform:translateX(0%);
+}
+
+.facility-description{
+  position:absolute;
+  left:0px;
+  background: var(--mainWhite);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translatex(-100%);
+  transition:var(--mainTransition);
+  opacity:.75;
+}
+
+.title ,.facility-title{
+  color:var(--mainBlack);
+  text-transform: uppercase;
+  letter-spacing: var(--mainSpacing);
+  margin:10px 0;
+}
+
+.facility-text{
+  padding:1rem;
+  font-size: .8em;
+  color:var(--mainBlack);
+  letter-spacing: var(--mainSpacing);
+  text-align:center;
+}
+.browse-gallery-btn{
+  padding:1rem 2rem;
+  background:var(--primaryColor);
+  border:none;
+  color:var(--mainWhite);
+  text-transform: uppercase;
+  letter-spacing: var(--mainSpacing);
+  cursor:pointer;
+  margin:10px 0;
+  transition:var(--mainTransition);
+}
+.browse-gallery-btn:hover{
+  background:var(--mainGrey);
+  color:var(--primaryColor);
+  border:1px solid var(--primaryColor);
+}
+/* end of facilities section */
+/* ============================ */
+/* styles for contact form  */
+.contact-section{
+  background:var(--primaryColor);
+  color:var(--mainWhite);
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-direction: column;
+  font-family: sans-serif;
+  padding:1rem;
+  transition:var(--mainTransition);
+  scroll-margin-top:4rem;
+}
+
+.form-heading{
+  color:var(--mainWhite);
+  letter-spacing: var(--mainSpacing);
+  text-transform: uppercase;
+}
+.form-container{
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+}
+.form-input{
+    width: 100%;
+    position:relative;
+    height: 50px;
+    overflow:hidden;
+    margin: 30px;
+    width:100%;
+ }
+.form-input .name{
+    height: 100%;
+    width:100%;
+    color:var(--mainBlack);
+    padding-top: 20px;
+    outline:none;
+    font-size: 18px;
+    background:none;
+    border:none;
+    letter-spacing: var(--mainSpacing);
+}
+
+.form-input .label-name{
+    position:absolute;
+    bottom: 0px;
+    left:0px;
+    width: 100%;
+    height: 100%;
+    pointer-events:none;
+    padding:1rem;
+    border-bottom:1px solid #000;
+}
+.form-input .label-name::after{
+    content: '';
+    position:absolute;
+    left:0;
+    bottom:-1px;
+    height: 100%;
+    width: 100%;
+    border-bottom:3px solid var(--mainGrey);
+    transform:translate(-100%);
+    transition:var(--mainTransition);
+}
+.content-name{
+    position: absolute;
+    bottom:5px;
+    left: 0px;
+    transition:var(--mainTransition);
+    letter-spacing: var(--mainSpacing);
+}
+.form-input .name:focus + .label-name .content-name,
+.form-input .name:valid + .label-name .content-name{
+    transform:translateY(-150%);
+    font-size: 11px;
+    color:var(--mainGrey);
+}
+.form-input .name:focus + .label-name::after,
+.form-input .name:valid + .label-name::after{
+    transform:translateX(0%);
+    transition: transform 0.3s ease;
+}
+.send-btn{
+  padding:1rem 2rem;
+  background:var(--mainWhite);
+  color:var(--primaryColor);
+  border:none;
+  letter-spacing:var(--mainSpacing);
+  text-transform: uppercase;
+  transition:var(--mainTransition);
+  cursor:pointer;
+  width:100%;
+}
+.send-btn:hover{
+  background:var(--primaryColor);
+  color:var(--mainwhite);
+  border:1px solid var(--mainGrey);
+}
+/* end of styles for contact form */
+/* ==================== */
+/* styles for footer section */
+.footer-container{
+  display:flex;
+  height:70vh;
+  flex-direction:column;
+  justify-content: space-around;
+}
+.footer-section{
+  height:50vh;
+  padding:1rem;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content: space-between;
+  /* margin-bottom:100px; */
+}
+/* styles for contacts details container */
+.contact-us-container{
+  display:flex;
+  color:var(--mainBlack);
+  font-size: .8em;
+  flex-direction:column;
+}
+.find-us-container{
+  display:flex;
+  /* margin:10px; */
+}
+.helpul-link-container{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer-nav{
+  display:flex;
+  justify-content: center;
+  width:100%;
+}
+.footer-nav li{
+  font-size: .8em;
+ display: inline-block;
+}
+.follow-us-container{
+  display: flex;
+  justify-content: center;
+}
+.social-link-container{
+  display: flex;
+  justify-content: center;
+}
+.legal-container{
+  width:100%;
+  text-align: center;
+  display:flex;
+  justify-content: center;
+  color:var(--mainBlack);
+  font-size: 12px;
+}
+
+.find-us-container h3{
+  color:var(--mainBlack);
+  letter-spacing:var(--mainSpacing);
+}
+.icon{
+  width:20px;
+}
+/* end of styles for contact details container */
+/* =================== */
+/* styles for links container */
+.links-container{
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  padding:1rem;
+}
+.links-container h2{
+  color:var(--mainBlack);
+  letter-spacing:var(--mainSpacing);
+  margin:5px;
+}
+.helpful-link{
+  list-style-type:none;
+  margin:6px;
+}
+.helpful-link a{
+  text-decoration:none;
+  color:var(--mainBlack);
+  letter-spacing:var(--mainSpacing);
+  /* margin-bottom:10px; */
+}
+.social-link-container{
+  display:flex;
+  align-items: center;
+}
+.follow-us-icon{
+  width:40px;
+}
+/* end of styles for links container */
+/* ============== */
+/* end of styles for footer section */
+/* ================== */
+
+
+}
+
+/* end of mobile styles */
